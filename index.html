@@ -7,11 +7,15 @@
   <title>Fetch Frontend Challenge</title>
 </head>
 <body>
-  <button class="getRecords" onclick=`${displayRecords()}`>Display Records</button>
+  <button class="getRecords" onclick=getRecords()>Display Records</button>
+  <button class="hidden filter" onclick=filterRecords(3)>Filter Records</button>
+  <button class="hidden clearFilters" onclick=clearFilters()>Clear All Filters</button>
   <div class="list">
     <ul>
     </ul>
   </div>
-  <script src="scripts.js"></script>
+  <script src="scripts/helpers.js"></script>
+  <script src="scripts/getRecords.js"></script>
+  <script src="scripts/filters.js"></script>
 </body>
 </html>
