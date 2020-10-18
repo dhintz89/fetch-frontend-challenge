@@ -8,8 +8,13 @@
 </head>
 <body>
   <button class="getRecords" onclick=getRecords()>Display Records</button>
-  <button class="hidden filter" onclick=filterRecords(3)>Filter Records</button>
+  <div class="hidden filters">
+    <button class="filterTitle" onclick=createDropdown()>Filter By listId</button>
+    <div class="filterMenu hidden">
+    </div>
+  </div>
   <button class="hidden clearFilters" onclick=clearFilters()>Clear All Filters</button>
+
   <div class="list">
     <ul>
     </ul>

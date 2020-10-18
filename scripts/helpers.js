@@ -10,5 +10,5 @@ function displayRecords(data) {
   });
   // change Get Records button to Refresh Records & unhide Filter button
   document.querySelector(".getRecords").innerHTML = "Refresh Records";
-  document.querySelector(".filter").classList.remove("hidden");
+  document.querySelector(".filters").classList.remove("hidden");
 };

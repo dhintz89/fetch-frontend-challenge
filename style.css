@@ -1,3 +1,28 @@
+button {
+  display: inline;
+}
+
+.filters {
+  cursor: pointer;
+  display: inline;
+}
+
+
+
+.filterMenu {
+  display: block;
+  border: 1px solid black;
+}
+
+.option {
+  width: initial;
+  border-bottom: 1px solid lightgrey;
+}
+
+.option:hover {
+  background-color: lightgrey;
+}
+
 .hidden {
-  visibility: hidden;
+  display: none;
 }
