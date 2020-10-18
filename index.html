@@ -7,19 +7,17 @@
   <title>Fetch Frontend Challenge</title>
 </head>
 <body>
-
-    <div class="buttons">
-      <button class="getRecords" onclick=getRecords()>Display Records</button>
-      <div class="hidden filters">
-        <button class="filterTitle" onclick=createDropdown()>Filter By ListId</button>
-        <div class="filterMenu hidden"></div>
-        <button class="hidden clearFilters" onclick=clearFilters()>Clear All Filters</button>
-      </div>
+  <div class="buttons">
+    <button class="getRecords" onclick=getRecords()>Display Records</button>
+    <div class="hidden filters">
+      <button class="filterTitle" onclick=createDropdown()>Filter By ListId</button>
+      <div class="filterMenu hidden"></div>
+      <button class="hidden clearFilters" onclick=clearFilters()>Clear All Filters</button>
     </div>
-    <div class="list">
-      <div class="grid-full">To view records, click on Display Records</div>
-    </div>
-
+  </div>
+  <div class="list">
+    <div class="grid-full">To view records, click on Display Records</div>
+  </div>
   <script src="scripts/helpers.js"></script>
   <script src="scripts/getRecords.js"></script>
   <script src="scripts/filters.js"></script>

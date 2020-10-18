@@ -1,7 +1,6 @@
-// display selected data
-
+// displays selected data
 function displayRecords(data) {
-  // clear currently displayed data
+  // clear currently displayed data to start fresh
   document.querySelector(".list").innerHTML = "";
 
   // display table headers

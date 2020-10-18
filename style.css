@@ -1,3 +1,4 @@
+/* formatting for buttons */
 .buttons {
   position: absolute;
   width: 15%;
@@ -31,6 +32,8 @@ button {
 .option:hover {
   background-color: lightgrey;
 }
+
+/* end buttons formatting */
 
 /* grid */
 .list {

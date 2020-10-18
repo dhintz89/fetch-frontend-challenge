@@ -1,6 +1,6 @@
 // create dropdown menu
 function createDropdown() {
-  // determine unique listId values
+  // determine unique listId values based on data available in dataArry (current data)
   let dropdownOptions = [];
   dataArry.forEach(val => {
     if(!dropdownOptions.find(opt => opt === val.listId)) {
@@ -25,16 +25,18 @@ function createDropdown() {
 // filters data based on dropdown selection
 function filterRecords(event) {
   toDisplay = dataArry.filter(item => item.listId === parseInt(event.target.id));
-  displayRecords(toDisplay)
+  displayRecords(toDisplay);
+  // reveal Clear Filters button
   document.querySelector(".clearFilters").classList.remove("hidden");
   // hide filter options
   document.querySelector(".filterMenu").classList.add("hidden");
 };
 
+
 // display all records
 function clearFilters() {
   displayRecords(dataArry);
-  // hide filter options
+  // hide filter options and Clear Filters button
   document.querySelector(".filterMenu").classList.add("hidden");
   document.querySelector(".clearFilters").classList.add("hidden");
 }

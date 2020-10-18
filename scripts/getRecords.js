@@ -1,6 +1,7 @@
 // make data globally available to avoid unneccessary calls to API
 let dataArry = [];
 
+
 // pull records from site using cors-anywhere app as proxy to avoid CORS issues
 function getRecords() {
   fetch('https://cors-anywhere.herokuapp.com/https://fetch-hiring.s3.amazonaws.com/hiring.json')
@@ -8,6 +9,7 @@ function getRecords() {
     .then(text => JSON.parse(text))
     .then(data => processRecords(data));
 };
+
 
 // filter, sort, display
 function processRecords(data) {
@@ -23,5 +25,6 @@ function processRecords(data) {
   });
   // set global dataArry to resulting filtered, sorted array
   dataArry = filteredArry;
+  // display records stored in dataArry
   displayRecords(dataArry);
 }
