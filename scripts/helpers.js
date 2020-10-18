@@ -4,7 +4,7 @@ function displayRecords(data) {
   // clear currently displayed data
   document.querySelector(".list").innerHTML = "";
 
-  // display headers
+  // display table headers
   let header1 = document.createElement("div");
   header1.innerHTML = "ListId";
   header1.classList.add("grid-1");
@@ -23,8 +23,14 @@ function displayRecords(data) {
 
   // iterate through array of data to create a <li> for each entry
   data.forEach((item, i) => {
+    // determine bg-color based on odd or even row and odd or even listId
     let bc;
-    i % 2 === 0 ? bc = "#ffffff" : bc = "#d9d9d9";
+    if(item.listId % 2 === 0) {
+      i % 2 === 0 ? bc = "#ffffff" : bc = "#dec3c3";
+    } else {
+      i % 2 === 0 ? bc = "#ffffff" : bc = "#c3d8de";
+    }
+    // create rows based on data
     let g1 = document.createElement("div");
     g1.innerHTML = item.listId;
     g1.classList.add("grid-1");

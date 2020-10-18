@@ -13,7 +13,7 @@ function createDropdown() {
     let newEl = document.createElement("div");
     newEl.classList.add("option");
     newEl.id = option;
-    newEl.innerText = `listId ${option}`;
+    newEl.innerText = `ListId ${option}`;
     newEl.addEventListener("click", filterRecords);
     document.querySelector(".filterMenu").appendChild(newEl);
   });
@@ -36,4 +36,5 @@ function clearFilters() {
   displayRecords(dataArry);
   // hide filter options
   document.querySelector(".filterMenu").classList.add("hidden");
+  document.querySelector(".clearFilters").classList.add("hidden");
 }
