@@ -1,3 +1,82 @@
+:root {
+  --bg-color: #ffffff;
+  --bg-color2a: #c3d8de;
+  --bg-color2b: #dec3c3;
+  --font-color: #000000;
+  --font-color2: #ffffff;
+  --accent-color: lightgrey;
+}
+
+* {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+/* darkmode switch */
+.themeSwitch {
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  right: 30px;
+  top: 28px;
+}
+
+.switchLabel {
+  position: fixed;
+  right: 25px;
+  top: 8px;
+}
+
+  /* hidden, click anywhere in label element */
+.themeSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+  /* visible slider span */
+.themeSwitchSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+  /* button inside slider */
+.themeSwitchSlider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 5px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+  /* change color to blue when slider moves right */
+input:checked + .themeSwitchSlider {
+  background-color: #2196f3;
+}
+
+  /* move button right/left */
+input:checked + .themeSwitchSlider:before {
+  -webkit-transform: translateX(35px);
+  -ms-transform: translateX(35px);
+  transform: translateX(35px);
+}
+/* end darkmode switch */
+
+
 /* formatting for buttons */
 .buttons {
   position: absolute;
@@ -10,6 +89,8 @@
 
 button {
   width: 100%;
+  background-color: var(--accent-color);
+  color: var(--font-color);
 }
 
 .filters {
@@ -21,7 +102,8 @@ button {
 
 .filterMenu {
   display: block;
-  border: 1px solid black;
+  border: 1px solid var(--font-color);
+  background-color: var(--accent-color)
 }
 
 .option {
@@ -34,6 +116,7 @@ button {
 }
 
 /* end buttons formatting */
+
 
 /* grid */
 .list {
@@ -74,7 +157,7 @@ button {
 
 .header {
   font-weight: bold;
-  text-decoration: underline solid black;
+  text-decoration: underline solid var(--font-color);
   font-size: 1.5em;
   outline: none;
   background-color: none;
@@ -94,6 +177,24 @@ button {
 @media only screen and (max-width: 460px) {
   * {
     font-size: .9em;
+  }
+
+  .themeSwitch {
+    width: 40px;
+    height: 12px;
+  }
+
+  .themeSwitchSlider::before {
+    height: 11px;
+    width: 11px;
+    left: 1px;
+    bottom: 0.5px;
+  }
+
+  input:checked + .themeSwitchSlider:before {
+    -webkit-transform: translateX(27px);
+    -ms-transform: translateX(27px);
+    transform: translateX(27px);
   }
   
   .header {

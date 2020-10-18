@@ -25,9 +25,9 @@ function displayRecords(data) {
     // determine bg-color based on odd or even row and odd or even listId
     let bc;
     if(item.listId % 2 === 0) {
-      i % 2 === 0 ? bc = "#ffffff" : bc = "#dec3c3";
+      i % 2 === 0 ? bc = "var(--bg-color)" : bc = "var(--bg-color2b)";
     } else {
-      i % 2 === 0 ? bc = "#ffffff" : bc = "#c3d8de";
+      i % 2 === 0 ? bc = "var(--bg-color)" : bc = "var(--bg-color2a)";
     }
     // create rows based on data
     let g1 = document.createElement("div");
@@ -51,3 +51,24 @@ function displayRecords(data) {
   document.querySelector(".getRecords").innerHTML = "Refresh Records";
   document.querySelector(".filters").classList.remove("hidden");
 };
+
+
+// light/darkmode switch
+function toggleTheme() {
+  let darkMode = document.querySelector(".themeSwitch input").checked;
+  if (darkMode) {
+      document.documentElement.style.setProperty("--bg-color", "#262626");
+      document.documentElement.style.setProperty("--font-color", "#fff");
+      document.documentElement.style.setProperty("--font-color2", "#000");
+      document.documentElement.style.setProperty("--bg-color2a", "#6c777a");
+      document.documentElement.style.setProperty("--bg-color2b", "#7a6c6c");
+      document.documentElement.style.setProperty("--accent-color", "#424242");
+  } else {
+      document.documentElement.style.setProperty("--bg-color", "#fff");
+      document.documentElement.style.setProperty("--font-color", "#000");
+      document.documentElement.style.setProperty("--font-color2", "#fff");
+      document.documentElement.style.setProperty("--bg-color2a", "#c3d8de");
+      document.documentElement.style.setProperty("--bg-color2b", "#dec3c3");
+      document.documentElement.style.setProperty("--accent-color", "#lightgrey");
+  }
+}
