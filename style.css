@@ -7,8 +7,6 @@ button {
   display: inline;
 }
 
-
-
 .filterMenu {
   display: block;
   border: 1px solid black;
@@ -23,6 +21,57 @@ button {
   background-color: lightgrey;
 }
 
+/* grid */
+.list {
+  display: grid;
+  width: 50%;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: auto;
+  gap: 5px 0px;
+  justify-content: stretch;
+  justify-items: center;
+  text-align: center;
+}
+
+.grid-1 {
+  grid-column: 1 / span 1;
+  align-self: center;
+  justify-self: stretch;
+}
+
+.grid-2 {
+  grid-column: 2 / span 1;
+  align-self: center;
+  justify-self: stretch;;
+}
+
+.grid-3 {
+  grid-column: 3 / span 1;
+  align-self: center;
+  justify-self: stretch;
+}
+
+.header {
+  font-weight: bold;
+  text-decoration: underline solid black;
+  font-size: 1.5em;
+  outline: none;
+  background-color: none;
+}
+/* end grid */
+
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 450px) {
+  * {
+    font-size: .9em;
+  }
+  
+  .header {
+    font-size: 1em;
+  }
+
+
 }
